@@ -1,1 +1,264 @@
 
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FC Barcelona Fan Page</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f4f4f8;
+            color: #222;
+        }
+
+        header {
+            background: linear-gradient(90deg, #004D98, #A50044);
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 35px;
+            letter-spacing: 2px;
+        }
+
+        nav {
+            background: #061B49;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #EDBB00;
+        }
+
+        .hero {
+            height: 420px;
+            background:
+                linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.6)),
+                url("https://images.unsplash.com/photo-1522778119026-d647f0596c20?w=1600")
+                center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero h2 {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 20px;
+        }
+
+        section {
+            padding: 50px 10%;
+            text-align: center;
+        }
+
+        section h2 {
+            color: #A50044;
+            margin-bottom: 25px;
+            font-size: 30px;
+        }
+
+        .players {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            width: 230px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px #0002;
+            transition: transform .3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+        }
+
+        .card img {
+            width: 100%;
+            height: 190px;
+            object-fit: cover;
+        }
+
+        .card h3 {
+            padding: 15px;
+            color: #004D98;
+        }
+
+        .card p {
+            padding: 0 10px 20px;
+        }
+
+        .trophies {
+            background: #061B49;
+            color: white;
+        }
+
+        .trophies h2 {
+            color: #EDBB00;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 50px;
+        }
+
+        .stat h3 {
+            font-size: 40px;
+            color: #EDBB00;
+        }
+
+        button {
+            background: #A50044;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 17px;
+            margin-top: 25px;
+        }
+
+        button:hover {
+            background: #004D98;
+        }
+
+        footer {
+            background: #061B49;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>???? FC BARCELONA</h1>
+        <p>Mes que un club !</p>
+    </header>
+
+    <nav>
+        <a href="#accueil">Accueil</a>
+        <a href="#club">Le Club</a>
+        <a href="#joueurs">Joueurs</a>
+        <a href="#trophees">Troph‚es</a>
+    </nav>
+
+    <div class="hero" id="accueil">
+        <div>
+            <h2>VISCA BAR€A !</h2>
+            <p>Une passion, une histoire, une l‚gende.</p>
+        </div>
+    </div>
+
+    <section id="club">
+        <h2>Notre Club</h2>
+        <p>
+            Le FC Barcelone est un club mythique fond‚ en 1899.
+            Bas‚ en Catalogne, il repr‚sente une histoire,
+            une culture et une passion partag‚es par des millions
+            de supporters dans le monde.
+        </p>
+    </section>
+
+    <section id="joueurs">
+        <h2>Les Joueurs Stars</h2>
+
+        <div class="players">
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1508098682722-e99c643e7f0b?w=600"
+                     alt="Football">
+                <h3>Lamine Yamal</h3>
+                <p>Jeune talent du Bar‡a</p>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=600"
+                     alt="Football">
+                <h3>Pedri</h3>
+                <p>MaŒtre du milieu de terrain</p>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1522778119026-d647f0596c20?w=600"
+                     alt="Football">
+                <h3>Raphinha</h3>
+                <p>Puissance et technique</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="trophies" id="trophees">
+        <h2>Notre Histoire</h2>
+
+        <div class="stats">
+            <div class="stat">
+                <h3>1899</h3>
+                <p>Ann‚e de fondation</p>
+            </div>
+
+            <div class="stat">
+                <h3>5</h3>
+                <p>Ligue des Champions</p>
+            </div>
+
+            <div class="stat">
+                <h3>8</h3>
+                <p>Passion des supporters</p>
+            </div>
+        </div>
+
+        <button onclick="supporter()">
+            Je suis un supporter ??
+        </button>
+
+        <p id="message"></p>
+    </section>
+
+    <footer>
+        <p>¸ 2026 FC Barcelona Fan Page | Visca Bar‡a ????</p>
+    </footer>
+
+    <script>
+        function supporter() {
+            document.getElementById("message").innerHTML =
+                "?? Merci ! Bienvenue dans la famille des Culers ! ????";
+        }
+    </script>
+
+</body>
+</html>
+
