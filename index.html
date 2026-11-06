@@ -2,262 +2,379 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FC Barcelona Fan Page</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Barca Universe - Fan Zone</title>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Nunito:wght@700;900&display=swap');
 
-        body {
-            background: #f4f4f8;
-            color: #222;
-        }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        header {
-            background: linear-gradient(90deg, #004D98, #A50044);
-            color: white;
-            padding: 25px;
-            text-align: center;
-        }
+body {
+    background: #07152f;
+    color: white;
+    font-family: 'Nunito', sans-serif;
+    overflow-x: hidden;
+}
 
-        header h1 {
-            font-size: 35px;
-            letter-spacing: 2px;
-        }
+header {
+    background: linear-gradient(120deg, #004D98, #A50044);
+    padding: 25px;
+    text-align: center;
+    border-bottom: 5px solid #ffcc00;
+}
 
-        nav {
-            background: #061B49;
-            padding: 15px;
-            text-align: center;
-        }
+.logo {
+    font-family: 'Bangers', cursive;
+    font-size: 55px;
+    letter-spacing: 4px;
+    text-shadow: 4px 4px #061b49;
+}
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 15px;
-            font-weight: bold;
-        }
+header p {
+    color: #ffcc00;
+    font-size: 18px;
+    font-weight: 900;
+}
 
-        nav a:hover {
-            color: #EDBB00;
-        }
+nav {
+    background: #061b49;
+    padding: 18px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
 
-        .hero {
-            height: 420px;
-            background:
-                linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.6)),
-                url("https://images.unsplash.com/photo-1522778119026-d647f0596c20?w=1600")
-                center/cover;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            color: white;
-        }
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 15px;
+    font-weight: 900;
+    transition: .3s;
+}
 
-        .hero h2 {
-            font-size: 48px;
-            margin-bottom: 15px;
-        }
+nav a:hover {
+    color: #ffcc00;
+}
 
-        .hero p {
-            font-size: 20px;
-        }
+.hero {
+    min-height: 570px;
+    background:
+    linear-gradient(#00102a88, #00102a99),
+    url("https://images.unsplash.com/photo-1522778119026-d647f0596c20?w=1600")
+    center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 30px;
+}
 
-        section {
-            padding: 50px 10%;
-            text-align: center;
-        }
+.hero-content {
+    animation: zoom 1.2s ease;
+}
 
-        section h2 {
-            color: #A50044;
-            margin-bottom: 25px;
-            font-size: 30px;
-        }
+.hero h1 {
+    font-family: 'Bangers', cursive;
+    font-size: clamp(65px, 10vw, 120px);
+    color: #ffcc00;
+    text-shadow: 6px 6px #A50044, 10px 10px #061b49;
+}
 
-        .players {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 25px;
-        }
+.hero h2 {
+    font-size: 25px;
+    margin: 20px;
+    color: white;
+}
 
-        .card {
-            background: white;
-            width: 230px;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 4px 12px #0002;
-            transition: transform .3s;
-        }
+.hero button {
+    background: #ffcc00;
+    color: #061b49;
+    border: 4px solid white;
+    padding: 17px 35px;
+    font-size: 20px;
+    font-weight: 900;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: .3s;
+}
 
-        .card:hover {
-            transform: translateY(-8px);
-        }
+.hero button:hover {
+    transform: scale(1.15) rotate(-3deg);
+    background: #A50044;
+    color: white;
+}
 
-        .card img {
-            width: 100%;
-            height: 190px;
-            object-fit: cover;
-        }
+@keyframes zoom {
+    from {transform: scale(.5); opacity: 0;}
+    to {transform: scale(1); opacity: 1;}
+}
 
-        .card h3 {
-            padding: 15px;
-            color: #004D98;
-        }
+section {
+    padding: 75px 8%;
+    text-align: center;
+}
 
-        .card p {
-            padding: 0 10px 20px;
-        }
+.title {
+    font-family: 'Bangers', cursive;
+    font-size: 55px;
+    color: #ffcc00;
+    margin-bottom: 35px;
+    letter-spacing: 3px;
+}
 
-        .trophies {
-            background: #061B49;
-            color: white;
-        }
+.about {
+    background: #A50044;
+    border-top: 6px solid #ffcc00;
+    border-bottom: 6px solid #ffcc00;
+}
 
-        .trophies h2 {
-            color: #EDBB00;
-        }
+.about p {
+    font-size: 20px;
+    max-width: 800px;
+    margin: auto;
+    line-height: 1.8;
+}
 
-        .stats {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 50px;
-        }
+.players {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+}
 
-        .stat h3 {
-            font-size: 40px;
-            color: #EDBB00;
-        }
+.player {
+    background: linear-gradient(145deg, #004D98, #A50044);
+    border: 4px solid #ffcc00;
+    border-radius: 20px;
+    padding: 25px;
+    transition: .4s;
+    box-shadow: 7px 7px 0 #000;
+}
 
-        button {
-            background: #A50044;
-            color: white;
-            border: none;
-            padding: 15px 30px;
-            border-radius: 25px;
-            cursor: pointer;
-            font-size: 17px;
-            margin-top: 25px;
-        }
+.player:hover {
+    transform: translateY(-15px) rotate(-2deg);
+}
 
-        button:hover {
-            background: #004D98;
-        }
+.player .emoji {
+    font-size: 75px;
+    margin-bottom: 15px;
+}
 
-        footer {
-            background: #061B49;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-    </style>
+.player h3 {
+    font-family: 'Bangers', cursive;
+    font-size: 32px;
+    color: #ffcc00;
+}
+
+.player p {
+    margin-top: 10px;
+}
+
+.badge {
+    display: inline-block;
+    background: #ffcc00;
+    color: #061b49;
+    padding: 6px 15px;
+    border-radius: 20px;
+    margin-top: 15px;
+    font-weight: 900;
+}
+
+.stats {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 35px;
+}
+
+.stat {
+    background: #A50044;
+    border: 3px solid #ffcc00;
+    border-radius: 20px;
+    padding: 30px;
+    min-width: 190px;
+}
+
+.stat h3 {
+    font-family: 'Bangers', cursive;
+    font-size: 55px;
+    color: #ffcc00;
+}
+
+.fan {
+    background: linear-gradient(120deg, #A50044, #004D98);
+}
+
+.fan h2 {
+    font-family: 'Bangers', cursive;
+    font-size: 65px;
+    color: #ffcc00;
+}
+
+.fan button {
+    background: #ffcc00;
+    border: none;
+    border-radius: 40px;
+    padding: 18px 35px;
+    font-size: 20px;
+    font-weight: 900;
+    margin-top: 25px;
+    cursor: pointer;
+}
+
+#message {
+    font-size: 24px;
+    margin-top: 25px;
+    font-weight: 900;
+}
+
+footer {
+    background: #030c20;
+    padding: 30px;
+    text-align: center;
+    border-top: 5px solid #ffcc00;
+}
+
+footer span {
+    color: #ffcc00;
+}
+
+@media(max-width: 600px) {
+    .logo {font-size: 38px;}
+    nav a {margin: 7px; font-size: 13px;}
+    .hero {min-height: 450px;}
+    .title {font-size: 42px;}
+}
+</style>
 </head>
 
 <body>
 
-    <header>
-        <h1>???? FC BARCELONA</h1>
-        <p>Mes que un club !</p>
-    </header>
+<header>
+    <div class="logo">BARCA UNIVERSE ????</div>
+    <p>MES QUE UN CLUB - ONE LOVE ONE FAMILY!</p>
+</header>
 
-    <nav>
-        <a href="#accueil">Accueil</a>
-        <a href="#club">Le Club</a>
-        <a href="#joueurs">Joueurs</a>
-        <a href="#trophees">Troph‚es</a>
-    </nav>
+<nav>
+    <a href="#home">HOME</a>
+    <a href="#club">OUR CLUB</a>
+    <a href="#players">SUPERSTARS</a>
+    <a href="#trophies">TROPHIES</a>
+    <a href="#fans">FAN ZONE</a>
+</nav>
 
-    <div class="hero" id="accueil">
-        <div>
-            <h2>VISCA BAR€A !</h2>
-            <p>Une passion, une histoire, une l‚gende.</p>
+<div class="hero" id="home">
+    <div class="hero-content">
+        <h1>VISCA BARCA!</h1>
+        <h2>MORE THAN A CLUB. IT'S A WAY OF LIFE!</h2>
+        <button onclick="document.getElementById('fans').scrollIntoView({behavior:'smooth'})">
+            JOIN THE CULERS! ??
+        </button>
+    </div>
+</div>
+
+<section class="about" id="club">
+    <h2 class="title">THE BARCA LEGEND ?</h2>
+    <p>
+        Founded in 1899, FC Barcelona is not just a football club.
+        It is a symbol of passion, pride, history and greatness.
+        From Camp Nou to every corner of the world,
+        millions of fans live and breathe Blaugrana football!
+        <br><br>
+        ?? BLAUGRANA FOREVER! ??
+    </p>
+</section>
+
+<section id="players">
+    <h2 class="title">THE SUPERSTARS ??</h2>
+
+    <div class="players">
+
+        <div class="player">
+            <div class="emoji">?</div>
+            <h3>LAMINE YAMAL</h3>
+            <p>The magic boy! Speed, skills and pure talent.</p>
+            <span class="badge">MAGIC PLAYER</span>
+        </div>
+
+        <div class="player">
+            <div class="emoji">??</div>
+            <h3>PEDRI</h3>
+            <p>The midfield genius. Football is art!</p>
+            <span class="badge">THE BRAIN</span>
+        </div>
+
+        <div class="player">
+            <div class="emoji">??</div>
+            <h3>RAPHINHA</h3>
+            <p>Energy, power and unstoppable attacks!</p>
+            <span class="badge">THE BEAST</span>
+        </div>
+
+        <div class="player">
+            <div class="emoji">??</div>
+            <h3>TER STEGEN</h3>
+            <p>The wall between the posts!</p>
+            <span class="badge">THE WALL</span>
+        </div>
+
+    </div>
+</section>
+
+<section id="trophies">
+    <h2 class="title">THE GLORY ??</h2>
+
+    <div class="stats">
+        <div class="stat">
+            <h3>1899</h3>
+            <p>FOUNDATION YEAR</p>
+        </div>
+
+        <div class="stat">
+            <h3>5</h3>
+            <p>CHAMPIONS LEAGUE TITLES</p>
+        </div>
+
+        <div class="stat">
+            <h3>8</h3>
+            <p>FANS AROUND THE WORLD</p>
         </div>
     </div>
+</section>
 
-    <section id="club">
-        <h2>Notre Club</h2>
-        <p>
-            Le FC Barcelone est un club mythique fond‚ en 1899.
-            Bas‚ en Catalogne, il repr‚sente une histoire,
-            une culture et une passion partag‚es par des millions
-            de supporters dans le monde.
-        </p>
-    </section>
+<section class="fan" id="fans">
+    <h2>ARE YOU A REAL CULER? ??</h2>
+    <p>Show the world your love for FC Barcelona!</p>
 
-    <section id="joueurs">
-        <h2>Les Joueurs Stars</h2>
+    <button onclick="supportBarca()">
+        I LOVE BARCA! ????
+    </button>
 
-        <div class="players">
+    <div id="message"></div>
+</section>
 
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1508098682722-e99c643e7f0b?w=600"
-                     alt="Football">
-                <h3>Lamine Yamal</h3>
-                <p>Jeune talent du Bar‡a</p>
-            </div>
+<footer>
+    <h2>???? VISCA EL BARCA!</h2>
+    <p>Made with <span>??</span> by a true Culer</p>
+    <p>¸ 2026 BARCA UNIVERSE - FAN PAGE</p>
+</footer>
 
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=600"
-                     alt="Football">
-                <h3>Pedri</h3>
-                <p>MaŒtre du milieu de terrain</p>
-            </div>
+<script>
+let fans = 0;
 
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1522778119026-d647f0596c20?w=600"
-                     alt="Football">
-                <h3>Raphinha</h3>
-                <p>Puissance et technique</p>
-            </div>
+function supportBarca() {
+    fans++;
 
-        </div>
-    </section>
-
-    <section class="trophies" id="trophees">
-        <h2>Notre Histoire</h2>
-
-        <div class="stats">
-            <div class="stat">
-                <h3>1899</h3>
-                <p>Ann‚e de fondation</p>
-            </div>
-
-            <div class="stat">
-                <h3>5</h3>
-                <p>Ligue des Champions</p>
-            </div>
-
-            <div class="stat">
-                <h3>8</h3>
-                <p>Passion des supporters</p>
-            </div>
-        </div>
-
-        <button onclick="supporter()">
-            Je suis un supporter ??
-        </button>
-
-        <p id="message"></p>
-    </section>
-
-    <footer>
-        <p>¸ 2026 FC Barcelona Fan Page | Visca Bar‡a ????</p>
-    </footer>
-
-    <script>
-        function supporter() {
-            document.getElementById("message").innerHTML =
-                "?? Merci ! Bienvenue dans la famille des Culers ! ????";
-        }
-    </script>
+    document.getElementById("message").innerHTML =
+        "?? VISCA BARCA! You are Culer number " + fans + "! ??";
+}
+</script>
 
 </body>
 </html>
